@@ -1,0 +1,102 @@
+/* Design tokens, reset and typography */
+:root {
+  /* Brand palette, sampled from the logo (blue → pink gradient) */
+  --brand-blue: #4d85ce;
+  --brand-pink: #c92e66;
+  --brand-gradient: linear-gradient(100deg, var(--brand-blue), var(--brand-pink));
+
+  /* Semantic roles (white text on these passes WCAG AA) */
+  --primary: var(--brand-pink);
+  --primary-hover: #bc265c;
+  --primary-light: #e86a98;   /* pink text on dark backgrounds */
+  --secondary: #2f6bc0;
+  --secondary-light: #8fb4e8; /* blue text on dark backgrounds */
+
+  /* Neutrals, slightly tinted toward the brand navy */
+  --bg: #0b0d14;
+  --bg-2: #131622;
+  --card: #1a1e2b;
+  --line: #252a38;
+  --text: #f4f5f7;
+  --text-soft: #cfd3da;
+  --muted: #a3a8b3;
+  --light: #f3f4f8;
+  --dark-text: #0b0d14;
+  --dark-muted: #4a4f5a;
+
+  --font-display: Anton, Impact, sans-serif;
+  --font-body: Inter, system-ui, sans-serif;
+
+  --wrap: 1240px;
+  --gutter: 24px;
+  --radius: 20px;
+  --header-h: 76px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: .95;
+  letter-spacing: .5px;
+}
+
+.wrap {
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--secondary-light);
+  margin-bottom: 10px;
+}
+
+.text-gradient {
+  color: var(--primary-light); /* fallback when background-clip is unsupported */
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+@media (max-width: 480px) {
+  :root { --gutter: 16px; }
+}

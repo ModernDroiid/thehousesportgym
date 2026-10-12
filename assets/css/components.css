@@ -1,0 +1,150 @@
+/* Reusable components: buttons, badge, photo placeholder, cards */
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform .2s, background-color .2s, border-color .2s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:focus-visible { outline: 2px solid var(--secondary-light); outline-offset: 3px; }
+
+.btn--primary { background: var(--primary); color: #fff; }
+.btn--primary:hover { background: var(--primary-hover); }
+.btn--ghost { border-color: var(--line); }
+.btn--ghost:hover { border-color: var(--muted); }
+.btn--dark { background: var(--dark-text); color: #fff; }
+.btn--sm { padding: 8px 18px; font-size: 14px; }
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.badge .icon { fill: #f5b301; stroke: none; width: 14px; height: 14px; }
+
+/* Photo placeholder (replace with <img> when photos are available) */
+.photo {
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+img.photo { width: 100%; height: auto; padding: 0; object-fit: cover; }
+
+/* Branded fallback for locations without a photo */
+.photo--brand {
+  gap: 6px;
+  align-content: center;
+  background: var(--brand-gradient);
+  color: #fff;
+}
+.photo--brand .icon { width: 32px; height: 32px; }
+.photo--brand span {
+  font-family: var(--font-display);
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Location card */
+.sede-card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.sede-card .photo {
+  aspect-ratio: 16 / 6;
+  border: 0;
+  border-radius: 0;
+}
+.sede-card__body { padding: 32px 28px; }
+.sede-card__title { font-size: 30px; margin-bottom: 16px; }
+.sede-card__title small { font-size: .65em; color: var(--muted); }
+.sede-card__info li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: var(--text-soft);
+}
+.sede-card__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+
+/* Schedule table */
+.schedule {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.schedule__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--line);
+  font-size: 15px;
+}
+.schedule__row:last-child { border-bottom: 0; }
+.schedule__row dt { font-weight: 600; }
+.schedule__row dd { color: var(--text-soft); text-align: right; }
+
+/* Group classes card */
+.class-card {
+  background: var(--secondary);
+  border-radius: var(--radius);
+  padding: 32px;
+}
+.class-card__tags { display: flex; gap: 10px; margin-bottom: 20px; }
+.class-card__tags li {
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: 600;
+}
+.class-card__title { font-size: 44px; }
+.class-card__time { margin: 6px 0 20px; font-size: 20px; font-weight: 700; }
+.class-card__text { margin-bottom: 20px; font-size: 15px; }
+
+/* Referral reward card */
+.reward {
+  padding: 28px;
+  border-radius: 16px;
+  background: var(--bg-2);
+}
+.reward--hot { background: var(--primary); }
+.reward small { font-size: 13px; opacity: .8; }
+.reward strong {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.reward span { font-size: 14px; opacity: .85; }
+
+@media (max-width: 480px) {
+  .schedule__row { flex-direction: column; gap: 2px; padding: 16px; }
+  .schedule__row dd { text-align: left; }
+}

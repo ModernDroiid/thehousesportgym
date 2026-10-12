@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The House Sport Gym · Gimnasio familiar en Kennedy</title>
+  <meta name="description" content="Gimnasio familiar en Kennedy, Bogotá. Dos sedes, abierto toda la semana, clases de rumba y zumba.">
+  <meta name="theme-color" content="#0b0d14">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <!-- Marks JS as available so reveal styles only hide content when they can show it again -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.8A8 8 0 1 1 21 12z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3 6.9 7.5.6-5.7 5 1.7 7.4L12 18l-6.5 3.9 1.7-7.4-5.7-5 7.5-.6z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a href="#top" class="brand" aria-label="The House Sport, ir al inicio">
+        <img class="brand__logo" src="assets/img/logo.png" alt="" width="48" height="48">
+        <span>
+          <span class="brand__name">The House Sport</span>
+          <span class="brand__tagline">Gimnasio familiar</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Principal">
+        <ul>
+          <li><a href="#sedes">Sedes</a></li>
+          <li><a href="#horarios">Horarios</a></li>
+          <li><a href="#clases">Clases</a></li>
+          <li><a href="#referidos">Referidos</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contacto" class="btn btn--primary btn--sm" aria-label="Escríbenos">
+        <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>
+        <span class="btn__text">Escríbenos</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <div>
+          <p class="badge reveal">
+            <svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>
+            5.0 en Google · 48 reseñas
+          </p>
+          <h1 class="hero__title reveal delay-1">Entrena en casa.<br><span class="text-gradient">En familia.</span></h1>
+          <p class="hero__text reveal delay-2">Gimnasio familiar en Kennedy para personas de todas las edades. Calidez humana, buen precio y acompañamiento para que llegues a tu meta.</p>
+          <div class="hero__actions reveal delay-3">
+            <a href="#contacto" class="btn btn--primary">Agenda tu clase de prueba</a>
+            <a href="#sedes" class="btn btn--ghost">Ver sedes</a>
+          </div>
+          <dl class="stats">
+            <div class="reveal delay-4"><dt>sedes en Kennedy</dt><dd>2</dd></div>
+            <div class="reveal delay-5"><dt>días a la semana</dt><dd>7</dd></div>
+            <div class="reveal delay-6"><dt>abrimos entre semana</dt><dd>5 AM</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero__media reveal delay-2">
+          <img class="photo" src="assets/img/hero-comunidad.webp" width="837" height="606" fetchpriority="high"
+               alt="Socios de The House Sport posando juntos en el gimnasio durante una fiesta de disfraces">
+          <div class="hero__float reveal delay-7">
+            <strong>Rumba y Zumba</strong>
+            <span>Martes y jueves · 7:00 p. m.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sedes -->
+    <section class="section sedes" id="sedes" aria-labelledby="sedes-title">
+      <div class="wrap">
+        <p class="label reveal">Nuestras sedes</p>
+        <h2 class="section__title reveal" id="sedes-title">Dos sedes cerca de ti</h2>
+
+        <div class="grid-2">
+          <article class="sede-card reveal">
+            <div class="photo photo--brand" aria-hidden="true">
+              <svg class="icon"><use href="#i-pin"/></svg>
+              <span>Kennedy</span>
+            </div>
+            <div class="sede-card__body">
+              <h3 class="sede-card__title">Sede Kennedy</h3>
+              <ul class="sede-card__info">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Carrera 81B # 9-07, Kennedy</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+573004825683">300 482 5683</a></li>
+              </ul>
+              <div class="sede-card__actions">
+                <a class="btn btn--primary btn--sm" href="https://wa.me/573004825683" target="_blank" rel="noopener">WhatsApp</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=Cra.+81b+%239-07%2C+Kennedy%2C+Bogot%C3%A1%2C+Cundinamarca" target="_blank" rel="noopener">Cómo llegar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="sede-card reveal delay-2">
+            <div class="photo photo--brand" aria-hidden="true">
+              <svg class="icon"><use href="#i-pin"/></svg>
+              <span>Castilla</span>
+            </div>
+            <div class="sede-card__body">
+              <h3 class="sede-card__title">Sede Valladolid <small>(Castilla)</small></h3>
+              <ul class="sede-card__info">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Carrera 81A # 9-07, 2.º piso</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+573222185574">322 218 5574</a></li>
+              </ul>
+              <div class="sede-card__actions">
+                <a class="btn btn--primary btn--sm" href="https://wa.me/573222185574" target="_blank" rel="noopener">WhatsApp</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.google.com/maps/search/?api=1&amp;query=4.62229166816484%2C-74.15485260354166" target="_blank" rel="noopener">Cómo llegar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horarios + Clases -->
+    <section class="section" id="horarios">
+      <div class="wrap grid-2 grid-2--wide">
+        <div>
+          <p class="label reveal">Horarios</p>
+          <h2 class="section__title reveal">Abiertos toda la semana</h2>
+          <p class="section__sub reveal">Mismo horario en ambas sedes.</p>
+          <dl class="schedule reveal delay-1">
+            <div class="schedule__row"><dt>Lunes a jueves</dt><dd>5:00 a. m. – 10:00 p. m.</dd></div>
+            <div class="schedule__row"><dt>Viernes</dt><dd>5:00 a. m. – 9:00 p. m.</dd></div>
+            <div class="schedule__row"><dt>Sábados</dt><dd>7:00 a. m. – 2:00 p. m.</dd></div>
+            <div class="schedule__row"><dt>Domingos</dt><dd>8:00 a. m. – 1:00 p. m.</dd></div>
+          </dl>
+        </div>
+
+        <div id="clases">
+          <p class="label reveal">Clases grupales</p>
+          <h2 class="section__title reveal">Suda con buena música</h2>
+          <p class="section__sub reveal">Clases incluidas para que entrenes acompañado.</p>
+          <div class="class-card reveal delay-2">
+            <ul class="class-card__tags"><li>Rumba</li><li>Zumba</li></ul>
+            <h3 class="class-card__title">Martes y jueves</h3>
+            <p class="class-card__time">7:00 p. m.</p>
+            <p class="class-card__text">Sigue las rutinas y novedades en nuestro Instagram.</p>
+            <a class="btn btn--dark btn--sm" href="https://www.instagram.com/gym_tsh" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+              @gym_tsh
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Referidos -->
+    <section class="section referidos" id="referidos" aria-labelledby="referidos-title">
+      <div class="wrap">
+        <div class="referidos__box reveal">
+          <div>
+            <p class="label">Programa de referidos</p>
+            <h2 class="section__title" id="referidos-title">Trae a tus amigos y entrena gratis</h2>
+            <p>Por cada amigo nuevo que se inscriba gracias a ti, sumas días gratis a tu membresía.</p>
+          </div>
+          <div class="referidos__rewards">
+            <div class="reward reveal delay-2"><small>1 referido</small><strong>5 días</strong><span>gratis</span></div>
+            <div class="reward reward--hot reveal delay-3"><small>6 referidos</small><strong>1 mes</strong><span>gratis de membresía</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta" id="contacto" aria-labelledby="cta-title">
+      <div class="wrap cta__inner">
+        <div>
+          <h2 class="section__title reveal" id="cta-title">Tu primera clase te espera</h2>
+          <p class="reveal delay-1">Escríbenos por WhatsApp a la sede que te quede más cerca y te contamos planes y precios.</p>
+        </div>
+        <div class="cta__actions reveal delay-2">
+          <a class="btn btn--dark" href="https://wa.me/573004825683" target="_blank" rel="noopener">Sede Kennedy</a>
+          <a class="btn btn--dark" href="https://wa.me/573222185574" target="_blank" rel="noopener">Sede Valladolid</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <span>© 2026 The House Sport Gym · Bogotá, Colombia</span>
+      <nav aria-label="Redes sociales">
+        <a href="https://www.instagram.com/gym_tsh" target="_blank" rel="noopener">Instagram</a>
+        <a href="#contacto">WhatsApp</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

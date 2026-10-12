@@ -1,0 +1,146 @@
+/* Page layout: header, sections, footer */
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(11, 13, 20, .85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-h);
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand__logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #fff; /* logo artwork has a white background */
+  object-fit: cover;
+}
+.brand__name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 19px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.brand__tagline {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.main-nav ul { display: flex; gap: 32px; font-size: 15px; font-weight: 500; }
+.main-nav a { transition: color .2s; }
+.main-nav a:hover { color: var(--primary-light); }
+
+/* Generic section */
+.section { padding: 96px 0; }
+.section__title { font-size: clamp(40px, 4.5vw, 56px); margin-bottom: 32px; }
+.section__sub { margin: -20px 0 28px; font-size: 15px; color: var(--muted); }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.grid-2--wide { gap: 48px; }
+
+/* Hero */
+.hero { padding: 72px 0 64px; border-bottom: 1px solid var(--line); }
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.hero__title { font-size: clamp(56px, 8vw, 104px); margin: 20px 0 24px; }
+.hero__text { max-width: 480px; font-size: 18px; color: var(--text-soft); }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 32px 0 44px; }
+.hero__media { position: relative; }
+.hero__media .photo { aspect-ratio: 4 / 3; }
+.hero__float {
+  position: absolute;
+  left: -32px;
+  bottom: -28px; /* hang off the photo edge so it covers fewer faces */
+  padding: 16px 22px;
+  border-radius: 14px;
+  background: linear-gradient(120deg, var(--secondary), var(--primary));
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+}
+.hero__float strong {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.hero__float span { font-size: 13px; }
+
+.stats { display: flex; gap: 64px; }
+.stats dd {
+  font-family: var(--font-display);
+  font-size: 36px;
+  line-height: 1.1;
+}
+.stats dt { font-size: 13px; color: var(--muted); }
+.stats div { display: flex; flex-direction: column-reverse; }
+
+/* Locations */
+.sedes { background: var(--bg-2); border-bottom: 1px solid var(--line); }
+
+/* Referrals */
+.referidos { padding-top: 0; }
+.referidos__box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 56px 40px;
+  border: 1px solid var(--primary);
+  border-radius: 24px;
+}
+.referidos__box .label { color: var(--primary-light); }
+.referidos__box .section__title { margin-bottom: 20px; }
+.referidos__box p { color: var(--text-soft); }
+.referidos__rewards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+/* Call to action */
+.cta { background: var(--light); color: var(--dark-text); }
+.cta__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.cta .section__title { max-width: 520px; margin-bottom: 16px; }
+.cta p { max-width: 560px; color: var(--dark-muted); }
+.cta__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Footer */
+.site-footer { padding: 32px 0; font-size: 13px; color: var(--muted); }
+.site-footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+.site-footer nav { display: flex; gap: 20px; color: var(--text); }
+.site-footer a:hover { color: var(--primary-light); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .main-nav { display: none; }
+  .hero__inner,
+  .grid-2,
+  .referidos__box { grid-template-columns: 1fr; }
+  .hero__float { left: 16px; bottom: -24px; }
+  .stats { gap: 36px; }
+  .referidos__box { padding: 40px 24px; }
+  .section { padding: 72px 0; }
+}
+
+@media (max-width: 480px) {
+  .site-header .btn__text,
+  .brand__tagline { display: none; }
+  .stats { gap: 24px; }
+  .referidos__rewards { grid-template-columns: 1fr; }
+}
